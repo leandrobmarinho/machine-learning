@@ -76,7 +76,6 @@ public class Entrada {
 			
          }	*/
         System.out.println(cont + " registros");
-
     }
 
     /*

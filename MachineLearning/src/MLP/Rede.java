@@ -3,11 +3,6 @@ package MLP;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.crypto.Data;
-
-import sun.reflect.generics.tree.Tree;
-
 import MLP.dados.Entrada;
 
 public class Rede {

@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Registro {
 	
-
 	private List<Double> tupla;
 	private double saida;
 	
