@@ -21,7 +21,7 @@ public class Entrada {
 
     private List<Registro> dadosDeEntrada;
     private ArrayList<Integer> indicesAleatorios;
-    private double porcentagemDados = 0.75;
+    private double porcentagemDados = 0.1;
     private ArrayList<Registro> dTeste;
     private ArrayList<Registro> dTreinamento;
 
@@ -34,7 +34,7 @@ public class Entrada {
 
         long t2 = System.currentTimeMillis();
         double deltaT = (t2 - t1);
-        System.out.println("intervalo de tempo: " + deltaT + " ms");
+        //System.out.println("intervalo de tempo: " + deltaT + " ms");
     }
 
     private void lerArquivo() throws IOException {
@@ -54,7 +54,7 @@ public class Entrada {
 
         }
 
-        System.out.println(cont + " registros");
+        //System.out.println(cont + " registros");
 
         //Separa conjunto de teste
         sorteiaDados();
@@ -79,11 +79,11 @@ public class Entrada {
     }
 
     public static void main(String[] args) {
-
         try {
             Entrada entrada = new Entrada();
-            MLM mlm = new MLM(entrada.getDTreinamento(), 50);
+            MLM mlm = new MLM(entrada.getDTreinamento(), 5);
             mlm.treinamento();
+            mlm.teste(entrada.getDTeste().get(0).getTupla());
 
         } catch (Exception ex) {
             Logger.getLogger(Entrada.class.getName()).log(Level.SEVERE, null, ex);
