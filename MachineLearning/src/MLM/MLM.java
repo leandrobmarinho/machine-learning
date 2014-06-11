@@ -1,5 +1,8 @@
 package MLM;
 
+import MLM.LevenbergMarquardt.LevenbergMarquardt;
+import MLM.LevenbergMarquardt.FuncaoLM;
+import MLM.LevenbergMarquardt.FuncaoLMInterface;
 import MLM.dados.Registro;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,7 +44,7 @@ public class MLM {
         
         SimpleMatrix distYT = distXR.mult(B);
         
-        Function funcao = new FuncaoLM();
+        FuncaoLMInterface funcao = new FuncaoLM();
         funcao.compute(null, null, null);
         LevenbergMarquardt LM = new LevenbergMarquardt(funcao);
         

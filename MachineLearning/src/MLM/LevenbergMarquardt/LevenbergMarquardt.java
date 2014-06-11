@@ -1,4 +1,4 @@
-package MLM;
+package MLM.LevenbergMarquardt;
 
 import org.ejml.data.DenseMatrix64F;
 import static org.ejml.ops.CommonOps.add;
@@ -40,7 +40,7 @@ public class LevenbergMarquardt {
     private double initialLambda;
 
     // the function that is optimized
-    private Function func;
+    private FuncaoLMInterface func;
 
     // the optimized parameters and associated costs
     private DenseMatrix64F param;
@@ -68,7 +68,7 @@ public class LevenbergMarquardt {
      *
      * @param funcCost Cost function that is being optimized.
      */
-    public LevenbergMarquardt( Function funcCost )
+    public LevenbergMarquardt (FuncaoLMInterface funcCost )
     {
         this.initialLambda = 1;
 
