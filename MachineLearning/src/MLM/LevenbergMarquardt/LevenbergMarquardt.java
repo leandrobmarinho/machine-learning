@@ -32,6 +32,8 @@ import static org.ejml.ops.SpecializedOps.diffNormF;
  * </p>
  * @author Peter Abeles
  */
+
+//https://github.com/nybblr/cs4496-particle-systems/blob/master/libs/ejml/examples/src/org/ejml/example/LevenbergMarquardt.java
 public class LevenbergMarquardt {
     // how much the numerical jacobian calculation perturbs the parameters by.
     // In better implementation there are better ways to compute this delta.  See Numerical Recipes.
